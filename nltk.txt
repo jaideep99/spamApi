@@ -1,3 +1,2 @@
-PorterStemmer
+stopwords
 word_tokenize
-corpus
