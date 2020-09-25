@@ -18,7 +18,6 @@ def predict():
 
     x = [data['text']]
     x = normalise_data(x)
-    x = ir_trim(x)
     counts = vectorizer.transform(x)
     result = model.predict(counts)
 
