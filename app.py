@@ -1,7 +1,7 @@
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from loaddata import normalise_data, ir_trim
+from loaddata import normalise_data
 import pandas as pd
 from flask import Flask, jsonify, request
 

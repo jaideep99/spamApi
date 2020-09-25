@@ -25,15 +25,6 @@ def normalise_data(text):
 
     return text
 
-def get_normalisedData():
-    dt = pd.read_csv(path)
-    data = dt.to_dict()
-    data['text'] = normalise_data(data['text'])
-
-    data = pd.DataFrame(data)
-    data = data[:2736]
-    return data
-
 
 
 
