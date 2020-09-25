@@ -1,7 +1,7 @@
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from loaddata import normalise_data
+from loaddata import normalise_data, ir_trim
 import pandas as pd
 from flask import Flask, jsonify, request
 
@@ -18,6 +18,7 @@ def predict():
 
     x = [data['text']]
     x = normalise_data(x)
+    x = ir_trim(x)
     counts = vectorizer.transform(x)
     result = model.predict(counts)
 
